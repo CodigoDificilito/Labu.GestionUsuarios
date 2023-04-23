@@ -1,4 +1,9 @@
+using Application.Interfaces.IUsuario;
+using Application.UseCase.Services;
+using Domain.Entities;
+using Infrastructure.Commands;
 using Infrastructure.Persistence;
+using Infrastructure.Querys;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +18,9 @@ builder.Services.AddSwaggerGen();
 //custom
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IUsuarioCommand, UsuarioCommand>();
+builder.Services.AddScoped<IUsuarioQuery, UsuarioQuery>();
 
 
 var app = builder.Build();

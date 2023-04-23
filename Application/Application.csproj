@@ -7,12 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interfaces\Querys\**" />
-    <EmbeddedResource Remove="Interfaces\Querys\**" />
-    <None Remove="Interfaces\Querys\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
@@ -22,8 +16,6 @@
     <Folder Include="Interfaces\IEmpresa\" />
     <Folder Include="Interfaces\IPersona\" />
     <Folder Include="Interfaces\IRecruiter\" />
-    <Folder Include="Interfaces\IUsuario\" />
-    <Folder Include="Response\" />
     <Folder Include="UseCase\Services\SDatosContacto\" />
     <Folder Include="UseCase\Services\SRecruiter\" />
     <Folder Include="UseCase\Services\SPersona\" />
