@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="Interfaces\Querys\**" />
+    <Compile Remove="Response\**" />
     <EmbeddedResource Remove="Interfaces\Querys\**" />
+    <EmbeddedResource Remove="Response\**" />
     <None Remove="Interfaces\Querys\**" />
+    <None Remove="Response\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,13 +23,10 @@
     <Folder Include="Interfaces\IAspirante\" />
     <Folder Include="Interfaces\IDatosContacto\" />
     <Folder Include="Interfaces\IEmpresa\" />
-    <Folder Include="Interfaces\IPersona\" />
     <Folder Include="Interfaces\IRecruiter\" />
     <Folder Include="Interfaces\IUsuario\" />
-    <Folder Include="Response\" />
     <Folder Include="UseCase\Services\SDatosContacto\" />
     <Folder Include="UseCase\Services\SRecruiter\" />
-    <Folder Include="UseCase\Services\SPersona\" />
     <Folder Include="UseCase\Services\SUsuario\" />
     <Folder Include="UseCase\Services\SEmpresa\" />
     <Folder Include="UseCase\Services\SAspirante\" />
