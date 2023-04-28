@@ -23,6 +23,11 @@ namespace Infrastructure.Commands
             _context.Add(usuario);
             await _context.SaveChangesAsync();
         }
+        public async Task UpdateUsuario(Usuario usuario)
+        {
+            _context.Update(usuario);
+            await _context.SaveChangesAsync();
+        }
 
     }
 }

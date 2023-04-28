@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Application.DTO.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces.IUsuario
 {
-    public interface IUsuarioCommand
+    public interface IUsuarioQueryService
     {
-        Task CreateUsuario(Usuario usuario);
-        Task UpdateUsuario(Usuario usuario);
+        public Task<ResponseMessage> GetUsuarioById(int usuarioId);
+
     }
 }
