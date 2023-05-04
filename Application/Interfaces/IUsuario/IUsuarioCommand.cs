@@ -10,5 +10,6 @@ namespace Application.Interfaces.IUsuario
     public interface IUsuarioCommand
     {
         Task CreateUsuario(Usuario usuario);
+        Task UpdateUsuario(Usuario usuario);
     }
 }

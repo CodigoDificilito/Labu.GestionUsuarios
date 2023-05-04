@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Response
+namespace Application.DTO.Request
 {
-    public class CreateUsuarioResponse
+    public class CreateUsuarioUpdateRequest
     {
+        public int UsuarioId { get; set; }
         public string UsuarioEmail { get; set; }
         public string UsuarioContraseña { get; set; }
     }

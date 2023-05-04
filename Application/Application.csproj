@@ -11,17 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\IAspirante\" />
     <Folder Include="Interfaces\IDatosContacto\" />
-    <Folder Include="Interfaces\IEmpresa\" />
-    <Folder Include="Interfaces\IPersona\" />
-    <Folder Include="Interfaces\IRecruiter\" />
     <Folder Include="UseCase\Services\SDatosContacto\" />
-    <Folder Include="UseCase\Services\SRecruiter\" />
-    <Folder Include="UseCase\Services\SPersona\" />
-    <Folder Include="UseCase\Services\SUsuario\" />
-    <Folder Include="UseCase\Services\SEmpresa\" />
-    <Folder Include="UseCase\Services\SAspirante\" />
   </ItemGroup>
 
 </Project>
