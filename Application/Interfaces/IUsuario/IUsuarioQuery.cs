@@ -10,5 +10,6 @@ namespace Application.Interfaces.IUsuario
     public interface IUsuarioQuery
     {
         public Task<Usuario> GetUsuarioById(int usuarioId);
+        public Task<List<Usuario>>GetListUsuario();
     }
 }

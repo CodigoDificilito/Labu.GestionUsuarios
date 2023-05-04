@@ -40,6 +40,7 @@ namespace Application.UseCase.Services.SUsuario
                 Contraseña = request.UsuarioContraseña
             };
             await _command.UpdateUsuario(usuario);
+
             return new ResponseMessage(201, usuario);
         }
     }

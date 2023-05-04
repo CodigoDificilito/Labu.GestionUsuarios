@@ -19,7 +19,7 @@ namespace Labu.Controllers
 
         }
 
-        [HttpPost("/Create")]
+        [HttpPost("/Usuario/Create")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> CreateUsuario(CreateUsuarioRequest request)
@@ -27,7 +27,7 @@ namespace Labu.Controllers
             var result = await _service.CrearUsuario(request);
             return StatusCode(result.code, result.result);
         }
-        [HttpPost("/Update")]
+        [HttpPost("/Usuario/Update")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> UpdateUsuario(CreateUsuarioUpdateRequest request)
@@ -37,13 +37,21 @@ namespace Labu.Controllers
         }
 
 
-        [HttpGet("/GetById")]
+        [HttpGet("/Usuario/GetById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult>GetUsuarioById(int usuarioId)
         {
             var result = await _queryService.GetUsuarioById(usuarioId);
             return StatusCode(result.code, result.result);
+        }
+
+        [HttpGet("/Usuario/GetListUsuario")]
+        public async Task<IActionResult> GetAllUsuarios()
+        {
+            var result = await _queryService.GetListaUsuario();
+            return new JsonResult(result);
+
         }
 
     }   

@@ -32,6 +32,23 @@ namespace Application.UseCase.Services.SUsuario
             });
         }
 
+        public async Task<List<UsuarioDTO>> GetListaUsuario()
+        {
+            var usuarios = await _query.GetListUsuario();
+            var usuariosDTO = new List<UsuarioDTO>();
+
+            foreach (var item in usuarios)
+            {
+                var usuarioDTO = new UsuarioDTO()
+                {
+                    Email= item.Email,
+                    Contraseña= item.Contraseña
+                };
+                usuariosDTO.Add(usuarioDTO);
+            }
+            return usuariosDTO;
+        }
+
 
     }
 }
